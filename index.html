@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+        <!-- Aos (Animate on Scroll) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="assets/animate-waves.css">
+        <!-- Script -->
+        <script src="https://kit.fontawesome.com/665b6ba660.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            html {
+                scroll-snap-type: y mandatory;
+                scroll-behavior: smooth;
+            }
+            section{
+                scroll-snap-align: start;
+            }
+        </style>
+        
+    </head>
+    <body class="font-['poppins'] text-[#292D32] relative">
+        <!-- SideBar -->
+        <section id="sidebar">
+            <!-- mobile -->
+            <div id="mobileSidebar" class="lg:hidden">
+                <ul class="w-full z-50 fixed bg-white shadow top-0 flex items-center justify-center py-3 gap-5">
+                    <!-- home sidebar -->
+                    <li>
+                        <a href="#home" onclick="sound()">
+                            <i class="fa-solid fa-house-chimney fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endHome sidebar -->
+
+                    <!-- about me sidebar -->
+                    <li>
+                        <a href="#about" onclick="sound()">
+                            <i class="fa-solid fa-user fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endAbout sidebar -->
+
+                    <!-- education sidebar -->
+                    <li>
+                        <a href="#education" onclick="sound()">
+                            <i class="fa-solid fa-graduation-cap fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endEducation sidebar -->
+                    <!-- experience sidebar -->
+                    <li>
+                        <a href="#experience" onclick="sound()">
+                            <i class="fa-solid fa-briefcase fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endexperience sidebar -->
+
+                    <!-- experience sidebar -->
+                    <li>
+                        <a href="#contact" onclick="sound()">
+                            <i class="fa-solid fa-address-book fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endExperience sidebar -->
+                </ul>
+            </div>
+            <!-- desktop -->
+            <div id="desktopSidebar" class="hidden lg:block">
+                <audio id="bubble">
+                    <source src="sounds/bubble"></source>
+                </audio>
+                <ul class="ml-7 w-14 z-50 fixed bottom-48 left-0 flex flex-col items-center justify-center py-10 gap-5">
+                    <!-- home sidebar -->
+                    <li>
+                        <a href="#home" onclick="sound()">
+                            <i class="fa-solid fa-house-chimney fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endHome sidebar -->
+
+                    <!-- about me sidebar -->
+                    <li>
+                        <a href="#about" onclick="sound()">
+                            <i class="fa-solid fa-user fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endAbout sidebar -->
+
+                    <!-- education sidebar -->
+                    <li>
+                        <a href="#education" onclick="sound()">
+                            <i class="fa-solid fa-graduation-cap fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endEducation sidebar -->
+                    <!-- experience sidebar -->
+                    <li>
+                        <a href="#experience" onclick="sound()">
+                            <i class="fa-solid fa-briefcase fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endexperience sidebar -->
+
+                    <!-- experience sidebar -->
+                    <li>
+                        <a href="#contact" onclick="sound()">
+                            <i class="fa-solid fa-address-book fa-lg text-violet-600 hover:text-violet-800 hover:scale-150 transition ease-in-out"></i>
+                        </a>
+                    </li>
+                    <!-- endExperience sidebar -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Home -->
+        <section id="home" class="h-screen grid content-center relative">
+            <!-- pattern -->
+            <svg id="patternId" class="absolute -z-10" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="a" patternUnits="userSpaceOnUse" width="29" height="50.115" patternTransform="scale(3) rotate(0)">
+                        <rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)" />
+                        <path
+                            d="M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z"
+                            stroke-width="0.5"
+                            stroke="hsla(259, 0%, 94%, 1)"
+                            fill="none"
+                        />
+                    </pattern>
+                </defs>
+                <rect width="800%" height="800%" transform="translate(-12,0)" fill="url(#a)" />
+            </svg>
+
+            <div class="mx-5 lg:mx-60 h-screen flex lg:items-center lg:justify-between relative">
+                <!-- heading -->
+                <div id="heading" class="w-auto mt-24 lg:mt-0">
+                    <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold">Hallo</h1>
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold">Saya Robi Setiawan</h2>
+                    <p class="text-sm lg:text-base my-3 font-semibold">I'm Web Developer</p><br>
+                    <a href="#about" onclick="sound()" class="bg-slate-300/80 p-3 rounded-2xl font-semibold hover:bg-violet-600 hover:text-slate-100 transition">about me</a>
+                </div>
+                <!-- icons -->
+                <div id="icons" class="hidden lg:block">
+                    <!-- html -->
+                    <a href="https://www.w3schools.com/html/">
+                        <img id="html" src="img/icons/html-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-14 left-72 bottom-48" alt="html" />
+                    </a>
+                    <!-- css -->
+                    <a href="https://www.w3schools.com/css/">
+                        <img id="css" src="img/icons/css-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-12 left-80 top-44" alt="css" />
+                    </a>
+                    <!-- js -->
+                    <a href="https://www.w3schools.com/js/">
+                        <img id="javascript" src="img/icons/javascript.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-14 right-96 top-20 rounded-lg" alt="javascript" />
+                    </a>
+                    <!-- bootstrap -->
+                    <a href="https://getbootstrap.com/">
+                        <img id="bootstrap" src="img/icons/bootstrap-5-logo-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-14 top-12 right-20" alt="bootstrap" />
+                    </a>
+                    <!-- tailwind -->
+                    <a href="https://tailwindcss.com/">
+                        <img id="tailwind" src="img/icons/tailwind-css-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-16 top-44 right-5" alt="tailwind" />
+                    </a>
+                    <!-- php -->
+                    <a href="https://www.php.net/">
+                        <img id="php" src="img/icons/php-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-16" alt="php" />
+                    </a>
+                    <!-- laravel -->
+                    <a href="https://laravel.com/">
+                        <img id="laravel" src="img/icons/laravel-icon.svg" class="absolute grayscale hover:grayscale-0 hover:animate-pulse transition ease-in-out duration-500 z-20 w-14 bottom-40" alt="laravel" />
+                    </a>
+                </div>
+                <!-- image -->
+                <div id="image" class="sm:w-3/5 md:w-2/5 lg:w-3/5 self-end z-10 absolute right-0">
+                    <img src="img/profile.png" alt="profile" class="grayscale" />
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about" class="h-screen relative">
+            <svg height="100%" width="100%" class="absolute -z-10">
+            <defs>
+                <pattern id="doodad" width="44" height="44" viewBox="0 0 40 40" patternUnits="userSpaceOnUse" patternTransform="">
+                <rect width="100%" height="100%" fill="rgba(15, 23, 42,1)"/>
+                <circle cx="40" cy="20" r="0.25" fill="rgba(196, 181, 253,0)"/>
+                <circle cx="0" cy="20" r="1" fill="rgba(68, 51, 122,1)"/>
+                <circle cx="40" cy="20" r="1" fill="rgba(68, 51, 122,1)"/>
+                </pattern>
+            </defs>
+            <rect fill="url(#doodad)" height="200%" width="200%"/>
+            </svg>
+            <div class="mx-5 lg:mx-60 h-screen flex flex-col items-center justify-center relative">
+            
+              
+                <!-- title-about -->
+                <div class="text-2xl md:text-4xl text-violet-300 font-bold mb-40 lg:mb-32" data-aos="fade-up">aBout Me</div>
+                <div>
+                    <i class="fa-solid fa-code fa-3x fa-shake text-violet-300" style="--fa-animation-duration: 3s" data-aos="fade-up"></i>
+                </div>
+                <hr class="w-32 h-1.5 mb-6 rounded-full bg-violet-300" data-aos="fade-up" />
+                <!-- content-about -->
+                <p class="text-center md:px-28 text-violet-300 text-sm md:text-base" data-aos="fade-up">
+                    saya adalah seorang lulusan IT yaitu jurusan sistem informasi fakultas ilmu komputer, saya sangat tertarik berkarir di dunia IT terutama di dunia programmer, saya menyukai tantangan di dunia programmer, hal ini
+                    dibuktikan dengan pengalaman magang saya dan saya sudah menyelesaikan beberapa project ditempat saya magang, dan saya dapat mengoperasikan beberapa software atau aplikasi yang biasa digunakan oleh perusahaan
+                </p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="relative">
+            <div class="mx-5 h-screen flex flex-col items-center justify-center gap-5  lg:mx-60 lg:items-start">
+                <div class="hidden lg:block">
+                    <svg id="patternId" class="absolute -z-20 -rotate-45 right-0" width="50%" height="50%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="a" patternUnits="userSpaceOnUse" width="29" height="50.115" patternTransform="scale(3) rotate(0)">
+                                <rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)" />
+                                <path
+                                    d="M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z"
+                                    stroke-width="0.5"
+                                    stroke="hsla(259, 0%, 94%, 1)"
+                                    fill="none"
+                                />
+                            </pattern>
+                        </defs>
+                        <rect width="800%" height="800%" transform="translate(-12,0)" fill="url(#a)" />
+                    </svg>
+                </div>
+                <!-- formal education -->
+                <div>
+                    <h1 class="text-2xl font-bold text-center mb-4 md:text-4xl lg:text-start" data-aos="fade-right">fOrmal eDucation</h1>
+                    <div class="flex flex-col items-center justify-center gap-2 lg:flex-row">
+                        <div class="text-center text-sm md:text-lg lg:text-left" data-aos="fade-left">
+                            <p class="font-semibold">Universitas Bina Darma</p>
+                            <p>Juli 2018 - November 2023</p>
+                            <p>Strata 1 - (S1) Sistem Informasi (IPK 3.60)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- nonformal education -->
+                <div>
+                    <h1 class="text-2xl font-bold text-center mb-4 md:text-4xl lg:text-start" data-aos="fade-right">nOnformal eDucation</h1>
+                    <div class="flex flex-col items-center justify-center gap-2 mb-5 lg:flex-row lg:justify-start">
+                        <div class="text-center text-sm md:text-lg lg:text-start" data-aos="fade-left">
+                            <p class="font-semibold">Digital Kominfo (Progate)</p>
+                            <p>Intro to Front-end Development</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2 lg:flex-row lg:justify-start">
+                        <div class="text-center text-sm md:text-lg lg:text-start" data-aos="fade-left">
+                            <p class="font-semibold">SanberCode</p>
+                            <p>React JS - Web Frontend Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="relative">
+            <svg height="100%" width="100%" class="absolute -z-10">
+  <defs>
+    <pattern id="doodad" width="44" height="44" viewBox="0 0 40 40" patternUnits="userSpaceOnUse" patternTransform="">
+      <rect width="100%" height="100%" fill="rgba(15, 23, 42,1)"/>
+      <circle cx="40" cy="20" r="0.25" fill="rgba(196, 181, 253,0)"/>
+      <circle cx="0" cy="20" r="1" fill="rgba(68, 51, 122,1)"/>
+      <circle cx="40" cy="20" r="1" fill="rgba(68, 51, 122,1)"/>
+    </pattern>
+  </defs>
+  <rect fill="url(#doodad)" height="200%" width="200%"/>
+</svg>
+
+
+
+            <div class="text-white mx-5 h-screen flex flex-col items-center justify-center gap-5 lg:mx-60 lg:items-start">
+
+                <!-- experience -->
+                <div>
+                    <h1 class="text-2xl font-bold text-center mb-4 md:text-4xl lg:text-start" data-aos="fade-right">eXperience</h1>
+                    <div class="flex flex-col items-center justify-center gap-2 lg:flex-row">
+                        <div class="text-center text-sm md:text-lg lg:text-left" data-aos="fade-left">
+                            <p class="font-semibold">Universitas Bina Darma</p>
+                            <p>Juni 2022 - Januari 2023</p>
+                            <p>Magang sebagai web developer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- skills -->
+                <div>
+                    <h1 class="text-2xl font-bold text-center mb-4 md:text-4xl lg:text-start" data-aos="fade-right">sKills</h1>
+                    <div class="flex gap-3">
+                    <div class="space-y-3" data-aos="fade-right">
+                        <!-- html -->
+                        <div class="flex items-center ">
+                            <div class="text-center w-14">
+                                <i class="fa-brands fa-html5 fa-2x"></i>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">HTML</span>
+                        </div>
+                        <!-- css -->
+                        <div class="flex items-center">
+                            <div class="text-center w-14">
+                                <i class="fa-brands fa-css3-alt fa-2x"></i>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">CSS</span>
+                        </div>
+                        <!-- js -->
+                        <div class="flex items-center">
+                            <div class="text-center w-14">
+                                <i class="fa-brands fa-square-js fa-xl"></i></i>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">Javascript</span>
+                        </div>
+                        <!-- php -->
+                        <div class="flex items-center">
+                            <div class="text-center w-14">
+                                <i class="fa-brands fa-php fa-xl"></i>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">PHP</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3" data-aos="fade-left">
+                        <!-- bootstrap -->
+                        <div class="flex items-center">
+                           <div class="text-center w-14">
+                             <i class="fa-brands fa-bootstrap fa-xl"></i>
+                           </div>
+                           <span class="cursor-pointer hover:text-violet-800">Bootstrap</span>
+                        </div>
+                        <!-- css -->
+                        <div class="flex items-center">
+                            <div class="w-14">
+                                <svg fill="#ffffff" class="w-8 mx-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"></path></g></svg>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">Tailwind</span>
+                        </div>
+                        <!-- laravel -->
+                        <div class="flex items-center">
+                            <div class="text-center w-14">
+                                <i class="fa-brands fa-laravel fa-xl"></i>
+                            </div>
+                            <span class="cursor-pointer hover:text-violet-800">Laravel</span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <hr>
+        <section id="contact" class="bg-violet-200 relative">
+            <div class="mx-5 h-screen flex flex-col items-center justify-center gap-5 lg:mx-60 lg:items-start">
+                <div class="p-5 flex justify-center space-x-2 mx-auto md:hidden">
+                   <div data-aos="fade-left">
+                        <a href="#" id="instagram" class="flex items-center justify-center border-2 md:w-24 w-10 h-10 p-4 hover:text-violet-900 border-violet-900 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                    </div>
+                    <div data-aos="fade-left">
+                        <a href="#" id="github" class="flex items-center justify-center border-2 md:w-24 w-10 h-10 p-4 hover:text-violet-900 border-violet-900 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-github fa-xl "></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" id="gmail" class="flex items-center justify-center border-2 md:w-24 w-10 h-10 p-4 hover:text-violet-900 border-violet-900 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-regular fa-envelope fa-xl "></i>
+                        </a>  
+                    </div>
+                    <div data-aos="fade-right">
+                        <a href="#" id="whatsapp"  class="flex items-center justify-center border-2 md:w-24 w-10 h-10 p-4 hover:text-violet-900 border-violet-900 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-whatsapp fa-xl "></i>
+                        </a>  
+                    </div>
+                    <div data-aos="fade-right">
+
+                        <a href="#" id="linkedin"  class="flex items-center justify-center border-2 md:w-24 w-10 h-10 p-4 hover:text-violet-900 border-violet-900 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-linkedin-in fa-xl "></i>
+                        </a>  
+                    </div>
+                </div>
+                <!-- dekstop -->
+                <div class="hidden md:flex md:mx-auto md:gap-5 md:z-10 ">
+                    <div data-aos="fade-left">
+                        <a href="#" id="instagram" class="flex items-center justify-center border-4 md:w-20 md:h-20 sm:w-16 sm:h-16  p-4 hover:text-violet-900 border-violet-900 hover:border-violet-100 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-instagram fa-3x"></i>
+                        </a>
+                    </div>
+                    <div data-aos="fade-left">
+                        <a href="#" id="github" class="flex items-center justify-center border-4 md:w-20 md:h-20 sm:w-16 sm:h-16 p-4 hover:text-violet-900 border-violet-900 hover:border-violet-100 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-github fa-3x "></i>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" id="gmail" class="flex items-center justify-center border-4 md:w-20 md:h-20 sm:w-16 sm:h-16 p-4 hover:text-violet-900 border-violet-900 hover:border-violet-100 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-regular fa-envelope fa-3x "></i>
+                        </a>  
+                    </div>
+                    <div data-aos="fade-right">
+                        <a href="#" id="whatsapp"  class="flex items-center justify-center border-4 md:w-20 md:h-20 sm:w-16 sm:h-16 p-4 hover:text-violet-900 border-violet-900 hover:border-violet-100 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-whatsapp fa-3x "></i>
+                        </a>  
+                    </div>
+                    <div data-aos="fade-right">
+
+                        <a href="#" id="linkedin"  class="flex items-center justify-center border-4 md:w-20 md:h-20 sm:w-16 sm:h-16 p-4 hover:text-violet-900 border-violet-900 hover:border-violet-100 rounded-full cursor-pointer hover:bg-violet-100 bg-violet-900  text-violet-100 transition duration-700">
+                            <i class="fa-brands fa-linkedin-in fa-3x "></i>
+                        </a>  
+                    </div>
+                </div>
+                
+            </div>
+            <div class="absolute bottom-0 w-full">
+               <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 C 0,400 0,133 0,133 C 67.55384615384617,154.23076923076923 135.10769230769233,175.46153846153848 204,178 C 272.89230769230767,180.53846153846152 343.12307692307684,164.3846153846154 444,146 C 544.8769230769232,127.61538461538461 676.4,106.99999999999999 754,95 C 831.6,83.00000000000001 855.276923076923,79.61538461538463 928,101 C 1000.723076923077,122.38461538461537 1122.4923076923078,168.53846153846155 1216,178 C 1309.5076923076922,187.46153846153845 1374.753846153846,160.23076923076923 1440,133 C 1440,133 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#5b21b6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path><path d="M 0,400 C 0,400 0,266 0,266 C 59.05384615384614,253.75641025641025 118.10769230769228,241.5128205128205 204,257 C 289.8923076923077,272.4871794871795 402.62307692307695,315.7051282051282 499,308 C 595.376923076923,300.2948717948718 675.4000000000001,241.66666666666669 745,224 C 814.5999999999999,206.33333333333331 873.7769230769229,229.62820512820514 955,246 C 1036.223076923077,262.37179487179486 1139.4923076923078,271.8205128205128 1224,274 C 1308.5076923076922,276.1794871794872 1374.253846153846,271.0897435897436 1440,266 C 1440,266 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#5b21b6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+            </div>
+            <footer class="text-xs mb-2 p-2 absolute z-20 bottom-0 right-0 text-white">
+                <i class="fa fa-copyright" aria-hidden="true"></i> copyright Robi Setiawan
+            </footer>
+        </section>
+        
+
+
+        <!-- script -->
+
+        <!-- Animate on Scroll -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- Gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <!-- home section -->
+        <script>
+            gsap.from('#image', { y: 100, duration: 1 });
+            gsap.from('#heading', { x: -100, duration: 1 });
+            // icons
+            gsap.from('#html', {  y: -200, duration: 1 });
+            gsap.from('#css', { y:-200, duration: 1 });
+            gsap.from('#javascript', { y:-200, duration: 1 });
+            gsap.from('#bootstrap', { y:-200, duration: 1 });
+            gsap.from('#tailwind', {y:-200, duration: 1 });
+            gsap.from('#php', { y:-200, duration: 1 });
+            gsap.from('#laravel', { y:-200, duration: 1 });
+            
+        </script>
+        <!-- audio -->
+        <script>
+            function sound(){
+                let snd = new Audio('sounds/mouth-bass.mp3')//wav is also supported
+                snd.play()//plays the sound
+            }
+        </script>
+    </body>
+</html>
+
+<!-- resources -->
+<!-- pattern = https://pattern.monster/, https://doodad.dev/pattern-generator/ -->
+<!-- animate on scroll = https://michalsnik.github.io/aos/ -->
+<!-- animation = https://greensock.com/gsap/ -->
+<!-- pattert wave = https://svgwave.in/ -->
